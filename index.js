@@ -1,5 +1,6 @@
 import express from 'express';
 import { UserRepository } from './user-repository.js';
+import cors from 'cors';
 
 const server = express();
 server.use(express.json());
@@ -9,6 +10,8 @@ const PORT = process.env.PORT ?? 3000;
 server.get('/', (req, res) => {
     res.render('example', {username: 'DopoDev3'});
 })
+
+server.use(cors())
 
 server.post('/login' , async (req, res) => {
   const {username, password} = req.body;
