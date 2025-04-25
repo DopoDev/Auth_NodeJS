@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { Route, Routes, Navigate } from 'react-router-dom'
 import Login from './pages/login'
+import Register from './pages/register'
 
 function App() {
 
@@ -10,7 +11,7 @@ function App() {
       <Routes>
         <Route path = "/" element = {<Navigate to = "/login" /> } />
         <Route path = "/login" element = {<Login />} />
-        <Route path = "/register" element = {<h1>Register</h1>} />
+        <Route path = "/register" element = {<Register />} />
       </Routes>
     </>
   )
