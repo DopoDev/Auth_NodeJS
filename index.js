@@ -41,7 +41,7 @@ server.post('/logout', (req, res) => {})
 server.post('/protected', (req, res) => {})
 
 
-server.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-    console.log(`Press Ctrl+C to stop the server`);
-})
+server.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server is running on http://0.0.0.0:${PORT}`);
+  console.log(`Press Ctrl+C to stop the server`);
+});
